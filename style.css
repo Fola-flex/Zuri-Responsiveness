@@ -6,16 +6,153 @@
     box-sizing: border-box;
 }
 
-main {
+body {
+    font-family: Poppins;
+}
+
+section {
+    margin: auto;
+    margin-top: 5%;
+    width: 98%;
     background-image: url("assets/images/bg-intro-desktop.png");
     background-color: hsl(0, 100%, 74%) ;
 }
 
 .container {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 60px;
+    width: 98%;
+    margin: auto;
+    padding: 40px;
 }
 
-.text h1 {
+.text {
+    width: 40%;
     color: white;
 }
 
+.text h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.text p {
+    font-size: 12px;
+}
+
+.form {
+    width: 50%;
+}
+
+.contact-form {
+    display: block;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contact-form fieldset {
+    border: 1px solid white;
+}
+
+.contact-form div   {
+    margin-top: 15px;
+}
+
+.contact-form input {
+    outline: 0;
+    border: 1px solid rgb(194, 189, 189);
+    padding: 12px 0px 12px 30px;
+    margin: auto;
+    width: 100%;
+    border-radius: 3px;
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.contact-form input::placeholder {
+    font-family: Poppins;
+    font-weight: 800;
+} 
+
+
+.form > button {
+    background-color: hsl(248, 32%, 49%);
+    outline: 0;
+    border: 0;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.089);
+    padding: 15px 30px;
+    color: white;
+    font-weight: 600;
+    border-radius: 7px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Poppins;
+}
+
+.form > button span {
+    font-weight: 400;
+    font-family: Poppins;
+}
+
+.green-btn {
+    width: 100%;
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid rgb(0, 128, 49);
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    font-family: Poppins;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 10px;
+    color: hsl(246, 25%, 77%);
+}
+.small-text span{
+    color: hsl(0, 100%, 74%) ;
+    font-weight: 800;
+}
+
+@media (max-width: 640px) {
+    .section {
+        width: 100%;
+        background-image: url(/assets/images/bg-intro-mobile.png);
+    }
+
+    .container {
+        flex-direction: column;
+        row-gap: 50px;
+        width: 100%;
+    }
+
+    .text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container  {
+        padding: 10px;
+    }
+}
